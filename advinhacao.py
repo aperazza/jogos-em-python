@@ -7,17 +7,21 @@ print("*********************************")
 numero_secreto = random.randrange(1, 101)
 total_tentativas = 0
 pontos = 1000
+nivel = 0
 
-print("\nEscolha um nível de dificuldade:", numero_secreto)
-print("(1) Fácil (2) Médio (3) Difícil")
-nivel = int(input("Sua escolha: "))
+while nivel !=1 and nivel !=2 and nivel !=3:
+    print("\nEscolha um nível de dificuldade:", numero_secreto)
+    print("(1) Fácil (2) Médio (3) Difícil")
+    nivel = int(input("Sua escolha: "))
 
-if(nivel == 1):
-    total_tentativas = 20
-elif(nivel == 2):
-    total_tentativas = 10
-else:
-    total_tentativas = 5
+    if(nivel == 1):
+        total_tentativas = 20
+    elif(nivel == 2):
+        total_tentativas = 10
+    elif(nivel == 3):
+        total_tentativas = 5
+    else:
+        print("Nível inválido. Escolha o nível de dificuldade desejada")
 
 for rodada_atual in range(1, total_tentativas + 1):
     print("\n*********************************")
