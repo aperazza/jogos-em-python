@@ -9,7 +9,10 @@ total_tentativas = 0
 pontos = 1000
 nivel = 0
 
-while nivel !=1 and nivel !=2 and nivel !=3:
+# Seleção do nível do jogo.
+# ========================
+
+while nivel != 1 and nivel != 2 and nivel != 3:
     print("\nEscolha um nível de dificuldade:", numero_secreto)
     print("(1) Fácil (2) Médio (3) Difícil")
     nivel = int(input("Sua escolha: "))
@@ -22,6 +25,9 @@ while nivel !=1 and nivel !=2 and nivel !=3:
         total_tentativas = 5
     else:
         print("Nível inválido. Escolha o nível de dificuldade desejada")
+
+# Execução da lógica do jogo.
+# ==========================
 
 for rodada_atual in range(1, total_tentativas + 1):
     print("\n*********************************")
@@ -50,6 +56,9 @@ for rodada_atual in range(1, total_tentativas + 1):
             print("\nVocê errou! O número escolhido foi menor do que o número secreto.")
 
     rodada_atual = rodada_atual + 1
+
+# Final do jogo.
+# =============
 
 print("\nFim do jogo.")
 print("O número secreto era:", numero_secreto)
