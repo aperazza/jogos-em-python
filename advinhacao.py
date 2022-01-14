@@ -27,7 +27,6 @@ for rodada_atual in range(1, total_tentativas + 1):
     print("\n*********************************")
     print("Tentativa {} de {}".format(rodada_atual, total_tentativas))
     palpite = int(input("Escolha um número entre 1 e 100: "))
-#    print("O número escolhido foi: ", palpite)
 
     if(palpite < 1 or palpite > 100):
         print("\nNúmero inválido! Você deve digitar um número entre 1 e 100!")
